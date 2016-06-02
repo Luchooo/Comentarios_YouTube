@@ -1,0 +1,32 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='google', value='notranslate')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    meta(name='mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+    link(rel='icon', href='img/favicon.ico', type='image/x-icon')
+    script(src='js/jquery-1.11.3.min.js')
+    script(src='js/sweet-alert.js')
+    link(rel='stylesheet', type='text/css', href='css/estilos.css')
+    link(rel='stylesheet', type='text/css', href='css/sweet-alert.css')
+    script(src='js/comentarios.js')
+    title  Comentarios YouTube
+  body
+    header
+      #titulo Vídeo Comentarios - Luis
+    center
+      br
+      br
+      .cajadevideo
+        .video
+          iframe(width='854', height='480', src='https://www.youtube.com/embed/_o-XIryB2gg', frameborder='0', allowfullscreen='')
+      br
+      form#form_comentarios(action='/vistaVideo', method='POST')
+        textarea#comentarios.comentarios(placeholder='Escriba aqui su comentario')
+        br
+      #imprime.comentarios
+      a(href='/logout') Cerrar sesión
